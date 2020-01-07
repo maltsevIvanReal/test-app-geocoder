@@ -67,13 +67,16 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>Hoxton.SR1</version>
                 <type>pom</type>
-                <scope>import</scope>
+                <scope>runtime</scope>
             </dependency>
+
 
             <!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-maven-plugin -->
             <dependency>

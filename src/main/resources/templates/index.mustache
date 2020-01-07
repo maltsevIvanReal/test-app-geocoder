@@ -13,25 +13,69 @@
 <script src="https://api-maps.yandex.ru/2.1/?apikey=523b2f12-0858-4747-836e-0ed285a007f2&lang=ru_RU"
         type="text/javascript">
 </script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
+<div class="container mainContent">
 
-<form method="post" id="formMethod" class="formMethod">
-    <input name="text" style="width: 300px;" type="text" id="suggest" class="suggest"/>
-    <button type="submit" id="submitButton">Выполнить</button>
-</form>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="nameTextGeo">Простой геокодер</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6 borderFormDesign">
+                        <form method="post" id="formMethod" class="formMethod form-inline">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="suggest" class="sr-only"></label>
+                                <input placeholder="Поиск по карте" required name="text" style="width: 300px;"
+                                       type="text" id="suggest"
+                                       class="form-control suggest"/>
+                            </div>
+
+                            <button class="btn btn-primary mb-2" type="submit" id="submitButton">Выполнить</button>
+                        </form>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mapAndList">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4 mapWrapperDesign">
+                        <div class="map" id="map"></div>
+                    </div>
+                    <div class="col"></div>
 
 
-<div style="width: 500px; height: 500px; margin: 50px;" class="map" id="map"></div>
-
-<div class="box" id="box" style=" width: 250px; height: 500px;">
-
-    {{#messages}}
-        <div style='cursor: pointer; border: 1px solid black; margin: 7px 0 7px 0' class='divAdded'>{{geoName}}</div>
-    {{/messages}}
-
+                    <div class="col-4 listWrapperDesign">
+                        <div class="data-box">
+                            <div id="box" class="box">
+                                {{#messages}}
+                                    <div class='divAdded'>{{geoName}}</div>
+                                {{/messages}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

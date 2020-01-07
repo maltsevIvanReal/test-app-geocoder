@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&load=SuggestView&onload=onLoad"
+        type="text/javascript">
+</script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=523b2f12-0858-4747-836e-0ed285a007f2&lang=ru_RU"
+        type="text/javascript">
+</script>
+
+<script src="js/main.js"></script>
+
+
+
+<form method="post" id="formMethod" class="formMethod">
+    <input name="text" style="width: 300px;" type="text" id="suggest" class="suggest"/>
+    <button type="submit" id="submitButton">Выполнить</button>
+</form>
+
+
+<div style="width: 500px; height: 500px; margin: 50px;" class="map" id="map"></div>
+
+<div class="box" id="box" style=" width: 250px; height: 500px;">
+
+    {{#messages}}
+        <div style='cursor: pointer; border: 1px solid black; margin: 7px 0 7px 0' class='divAdded'>{{geoName}}</div>
+    {{/messages}}
+
+</div>
+</body>
+</html>

@@ -57,7 +57,9 @@ function init() {
 
         var address = document.getElementById("suggest").value;
 
-        $(".box").append("<div class='divAdded'>" + address + "</div>");
+        var addressTrim = address.trim();
+
+        $(".box").append("<div class='divAdded'>" + addressTrim + "</div>");
 
         var geocoder = ymaps.geocode(address);
 
